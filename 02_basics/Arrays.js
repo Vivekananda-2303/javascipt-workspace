@@ -1,28 +1,49 @@
-const myArr=[0,1,2,3,4]
-console.log(myArr[1]);
-const myplayer=["pedri","yamal"]
-const myArr2= new Array(1,2,3,4,5);
-// console.log(myArr2);
-//Array methods
-myArr2.push(7)
-myArr2.push(8)
-myArr2.push(9)
-myArr2.pop()
-// console.log(myArr2);
-// console.log(MyArr2.includes(9));
-// console.log(MyArr2.indexOf(3));
-// const  newArr = myArr2.join()
-// console.log(myArr2);
-// console.log(typeof newArr)
-//splice,slice
-console.log("A=",myArr2)
-const myn1=myArr.slice(1,3)
-console.log(myn1)
-console.log("B=",myArr2);
-const myn2= myArr2.splice(1,3);
-console.log("c=",myArr2)
-console.log(myn2)
 
+const arr=[1,2,3,4,5];//array literal
+console.log(typeof arr);
+const arr1=["pedri","yamal","rodri"];//string array
+const arr2= new Array(2,3,4,5,56);//array constructor
+
+arr.push(55);
+arr.push(46);
+arr.push(87);
+arr.pop();
+console.log(arr.includes(5));
+console.log(arr.indexOf(3));
+//join()-- convert array to String 
+ const arr3= arr.join('-');
+ console.log(arr2);
+  
+ let arr4=[10,20,30,40,50];
+ let result=arr4.slice(1,4);
+ console.log(result);
+ console.log(arr4);
+ let  arr5=[20,30,40,50,60];
+ //delete
+ arr5.splice(1,2);
+ console.log(arr5)
+ //adding
+ arr5.splice(1,0,30,40);
+ console.log(arr5);
+ arr5.splice(1,2,99,100);
+ console.log(arr5);
+ /*
+▎ "slice() returns a shallow copy without modifying the original array. splice() modifies the array in place by removing, adding, or replacing elements, and returns the removed items."
+┌───────────────────┬───────────────────────────────┬──────────────────────────────────────────────┐
+│      Feature      │       slice(start, end)       │     splice(start, deleteCount, ...items)     │
+├───────────────────┼───────────────────────────────┼──────────────────────────────────────────────┤
+│ Mutates original? │ ❌ No                         │ ✅ Yes                                       │
+├───────────────────┼───────────────────────────────┼──────────────────────────────────────────────┤
+│ Purpose           │ Extract a copy                │ Add/remove/replace elements                  │
+├───────────────────┼───────────────────────────────┼──────────────────────────────────────────────┤
+│ Returns           │ New array (copy)              │ Array of removed elements                    │
+├───────────────────┼───────────────────────────────┼──────────────────────────────────────────────┤
+│ Parameters        │ start, end (end not included) │ start, deleteCount, optional items to insert │
+├───────────────────┼───────────────────────────────┼──────────────────────────────────────────────┤
+│ Use case          │ Safe copying/subsetting       │ In-place array modification                  │
+└───────────────────┴───────────────────────────────┴──────────────────────────────────────────────┘
+
+*/
 
 
 
